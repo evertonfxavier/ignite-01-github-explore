@@ -7,9 +7,6 @@ function RepositoryList() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    //vou fazer um fetch > quando esse fetch me devolver uma resposta (then) >
-    //vou converter essa resposta pra json
-    //quando a resposta pra json termar de ser convertar, vou ter os dados do meu repositório
     fetch("https://api.github.com/orgs/rocketseat/repos")
       .then((response) => response.json())
       .then((data) => setRepositories(data));
